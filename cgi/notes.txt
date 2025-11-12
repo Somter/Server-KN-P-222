@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot "C:/Users/alecs/source/repos/Server-KN-P-222/cgi"
+    ServerName cgi221.loc
+    ServerAlias www.cgi221.loc
+    ErrorLog "C:/Users/alecs/source/repos/Server-KN-P-222/cgi"
+    CustomLog "C:/Users/alecs/source/repos/Server-KN-P-222/cgi" common
+ <Directory "C:/Users/alecs/source/repos/Server-KN-P-222/cgi">
+  AllowOverride All
+  Options -Indexes +ExecCGI
+  AddHandler cgi-script  .py
+  Require all granted
+  DirectoryIndex index.py index.html
+ </Directory>
+</VirtualHost>
+
+# C:\Users\alecs\source\repos\Server-KN-P-222\.venv\Scripts\python.exe
+
